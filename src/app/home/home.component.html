@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h1>{{ title }}</h1>
+    <button class="btn btn-primary"  (click)="logout()">Logout</button>
+  </div>
+  <nav>
+    <a routerLink="/" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" >Home</a>
+    <a [routerLink]="[ '/product' ]" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}">Products</a>
+  </nav>
+  <ng-content></ng-content>
+</div>
+

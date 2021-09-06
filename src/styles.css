@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.selected {
+  color: #fff;
+  background-color: #232632;
+}
+nav a {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 5px;
+}

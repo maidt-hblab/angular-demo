@@ -1,0 +1,26 @@
+<div class="container col-sm-3">
+  <h1 class="d-flex justify-content-center">Login</h1>
+  <form (ngSubmit)="onSubmit(form.value)" #form="ngForm" [formGroup]="formLogin">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+        formControlName="email"
+      >
+      <small id="emailHelp" class="form-text text-muted alert alert-danger" *ngIf="formLogin.get('email').errors?.required && formLogin.get('email').touched">Errors Email</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+        formControlName="password"
+      >
+      <small id="emailHelp" class="form-text text-muted alert alert-danger" *ngIf="formLogin.get('password').errors?.required && formLogin.get('password').touched">Errors Password</small>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary" [disabled]="formLogin.invalid" >Login</button>
+      <button class="btn btn-primary" (click)="goRegister()">Register</button>
+    </div>
+  </form>
+</div>
+
+<!-- <p>form value {{ formLogin.value | json }}</p>
+<p>Error {{ formLogin.controls.email?.errors | json }}</p> -->

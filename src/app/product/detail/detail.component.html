@@ -1,0 +1,12 @@
+<app-home title="Product detail">
+  <div *ngIf="product" >
+    <h2> {{ product.name }} </h2>
+    <p>
+      <img [src]="product.imageUrl" alt="" srcset="">
+    </p>
+    <p>
+      Price: {{ product.price | currency }}
+    </p>
+    <button class="btn btn-primary" (click)="backToList()">Back to list</button>
+  </div>
+</app-home>
